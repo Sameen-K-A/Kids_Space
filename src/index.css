@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 25%;
+    --primary: 210 100% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 85%;
+    --primary-glow: 210 100% 90%;
+    --secondary: 45 100% 75%;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-light: 45 100% 85%;
+    --secondary-glow: 45 100% 90%;
+    --accent: 120 60% 70%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 120 60% 80%;
+    --accent-glow: 120 60% 90%;
+    --coral: 15 85% 70%;
+    --coral-foreground: 0 0% 100%;
+    --coral-light: 15 85% 80%;
+    --coral-glow: 15 85% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+    --card-shadow: 220 15% 15% / 0.1;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 15% 45%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 210 100% 75%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-coral: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--coral-light)));
+    --gradient-rainbow: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--coral)));
+    --shadow-soft: 0 4px 20px hsl(var(--card-shadow));
+    --shadow-bounce: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.5);
+    --radius: 1rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+}
+
+@layer components {
+  .btn-hero {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-bounce hover:shadow-glow transform hover:scale-105 transition-all duration-300 ease-bounce;
+    background: var(--gradient-primary);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium shadow-soft hover:shadow-bounce transform hover:scale-105 transition-all duration-300 ease-bounce;
+    background: var(--gradient-secondary);
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium shadow-soft hover:shadow-bounce transform hover:scale-105 transition-all duration-300 ease-bounce;
+    background: var(--gradient-accent);
+  }
+
+  .btn-coral {
+    @apply bg-coral text-coral-foreground px-6 py-3 rounded-lg font-medium shadow-soft hover:shadow-bounce transform hover:scale-105 transition-all duration-300 ease-bounce;
+    background: var(--gradient-coral);
+  }
+
+  .card-playful {
+    @apply bg-card rounded-xl p-4 shadow-soft hover:shadow-bounce transition-all duration-300 ease-bounce;
+  }
+
+  .bounce-in {
+    animation: bounceIn 0.6s ease-bounce;
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .wiggle {
+    animation: wiggle 1s ease-in-out;
+  }
+
+  .animation-delay-0 {
+    animation-delay: 0ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animation-delay-1500 {
+    animation-delay: 1500ms;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+
+  .animation-delay-3000 {
+    animation-delay: 3000ms;
+  }
+
+  .bg-rainbow {
+    background: var(--gradient-rainbow);
+  }
+
+  .bg-primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .bg-secondary-gradient {
+    background: var(--gradient-secondary);
+  }
+
+  .bg-accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  .bg-coral-gradient {
+    background: var(--gradient-coral);
+  }
+}
+
+@layer utilities {
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translateY(50px);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    70% {
+      transform: scale(0.9);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes wiggle {
+
+    0%,
+    7%,
+    14%,
+    21%,
+    28%,
+    35%,
+    42%,
+    49%,
+    56%,
+    63%,
+    70%,
+    77%,
+    84%,
+    91%,
+    98%,
+    100% {
+      transform: translateX(0);
+    }
+
+    4% {
+      transform: translateX(-2px);
+    }
+
+    11% {
+      transform: translateX(2px);
+    }
+
+    18% {
+      transform: translateX(-2px);
+    }
+
+    25% {
+      transform: translateX(2px);
+    }
+  }
+
+  .font-playful {
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .font-fun {
+    font-family: 'Fredoka', cursive;
+  }
+
+  .font-clean {
+    font-family: 'Inter', sans-serif;
+  }
+}
