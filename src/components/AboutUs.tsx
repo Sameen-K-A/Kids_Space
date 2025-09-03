@@ -1,11 +1,32 @@
+import { motion, easeOut } from "framer-motion";
 import kidsActivitiesImage from "@/assets/images/kids-activities.jpg";
 
 export const AboutUs = () => {
+  const container = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, ease: easeOut, duration: 0.8 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { ease: easeOut, duration: 0.6 } },
+  };
+
   return (
     <section className="py-20 bg-background relative">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative bounce-in">
+        <motion.div
+          className="grid lg:grid-cols-2 gap-16 items-center"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div className="relative" variants={item}>
             <div className="relative rounded-3xl overflow-hidden shadow-soft">
               <img
                 src={kidsActivitiesImage}
@@ -13,13 +34,12 @@ export const AboutUs = () => {
                 className="w-full h-auto object-cover"
               />
             </div>
-
             <div className="absolute -top-6 -left-6 w-12 h-12 bg-accent/20 rounded-full float"></div>
             <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-coral/20 rounded-full float animation-delay-1000"></div>
-          </div>
+          </motion.div>
 
-          <div className="space-y-8 bounce-in animation-delay-300">
-            <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start space-y-4 text-center lg:text-left h-full">
+          <motion.div className="space-y-8" variants={item}>
+            <motion.div className="flex flex-col items-center justify-center lg:items-start lg:justify-start space-y-4 text-center lg:text-left h-full" variants={item}>
               <div className="inline-flex items-center gap-2 bg-secondary/20 text-foreground px-4 py-2 rounded-full font-fun font-semibold">
                 ✨ About Tumber Town Kids
               </div>
@@ -34,9 +54,9 @@ export const AboutUs = () => {
                 Our mission is simple: create a safe, engaging environment where kids can build confidence,
                 make friends, and develop healthy habits that will serve them for life.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <motion.div className="grid sm:grid-cols-2 gap-6" variants={item}>
               <div className="card-playful bg-primary/5">
                 <div className="text-primary text-3xl mb-3">🛡️</div>
                 <h3 className="font-fun text-xl font-semibold text-foreground mb-2">Safe Environment</h3>
@@ -60,17 +80,17 @@ export const AboutUs = () => {
                 <h3 className="font-fun text-xl font-semibold text-foreground mb-2">Community Focus</h3>
                 <p className="font-clean text-sm text-muted-foreground">Building lasting friendships and strong community connections through play.</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4 p-6 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-2xl">
+            <motion.div className="flex items-center gap-4 p-6 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-2xl" variants={item}>
               <div className="text-4xl">💫</div>
               <div>
                 <h4 className="font-fun text-lg font-semibold text-foreground">Our Promise</h4>
                 <p className="font-clean text-sm text-muted-foreground">Every child leaves with a smile, new friends, and excitement for their next visit!</p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
