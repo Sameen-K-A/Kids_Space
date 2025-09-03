@@ -7,7 +7,7 @@ const CartoonLion: React.FC = () => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), 2000);
+    const timer = setTimeout(() => setVisible(false), 200000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,9 +28,9 @@ const CartoonLion: React.FC = () => {
         x: visible ? 0 : 50,
       }}
       transition={{ duration: 0.1 }}
-      className="fixed -bottom-2 right-2 z-50 space-y-1 flex flex-col items-end"
+      className="fixed -bottom-2 right-0 z-50 space-y-1 flex flex-col items-end bg-lion-gradient pt-10 pl-10"
     >
-      <p className="text-foreground bg-white font-medium text-sm font-playful leading-relaxed px-4 py-2 rounded-2xl shadow-soft max-w-xs">
+      <p className="text-foreground bg-white font-medium text-sm font-playful leading-relaxed px-4 py-2 mr-5 rounded-2xl shadow-soft max-w-xs">
         Hi there! Welcome to Tumber Town! 🌟
       </p>
 
@@ -39,7 +39,7 @@ const CartoonLion: React.FC = () => {
           options={defaultOptions}
           height={150}
           width={150}
-          style={{ transform: "scaleX(-1)", marginRight: "-20px" }}
+          style={{ transform: "scaleX(-1)", marginRight: "-10px" }}
         />
       </div>
     </motion.div>
