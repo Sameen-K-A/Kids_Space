@@ -21,7 +21,7 @@ export const AboutUs = () => {
           <div className="space-y-8 bounce-in animation-delay-300">
             <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start space-y-4 text-center lg:text-left h-full">
               <div className="inline-flex items-center gap-2 bg-secondary/20 text-foreground px-4 py-2 rounded-full font-fun font-semibold">
-                ✨ About PlayWorld Kids
+                ✨ About Tumber Town Kids
               </div>
 
               <h2 className="font-playful text-4xl lg:text-5xl font-bold text-foreground leading-tight">
@@ -30,7 +30,7 @@ export const AboutUs = () => {
               </h2>
 
               <p className="font-clean text-muted-foreground leading-relaxed">
-                At PlayWorld Kids, we believe every child deserves to experience the pure joy of physical play.
+                At Tumber Town Kids, we believe every child deserves to experience the pure joy of physical play.
                 Our mission is simple: create a safe, engaging environment where kids can build confidence,
                 make friends, and develop healthy habits that will serve them for life.
               </p>

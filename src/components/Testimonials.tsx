@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah Michelle",
     avatar: "👩‍🦰",
-    content: "PlayWorld Kids has been a game-changer for our family! My kids actually ask to put their tablets away so we can come here. The staff is amazing and the activities keep them engaged for hours.",
+    content: "Tumber Town Kids has been a game-changer for our family! My kids actually ask to put their tablets away so we can come here. The staff is amazing and the activities keep them engaged for hours.",
     rating: 5,
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: "James Wilson",
     avatar: "👨‍🎓",
-    content: "Finding quality activities for my daughter was challenging until we discovered PlayWorld Kids. She's more active, sleeping better, and her social skills have improved dramatically.",
+    content: "Finding quality activities for my daughter was challenging until we discovered Tumber Town Kids. She's more active, sleeping better, and her social skills have improved dramatically.",
     rating: 5,
   },
   {
@@ -73,7 +73,7 @@ export const Testimonials = () => {
           </h2>
 
           <p className="font-clean text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real families who've discovered the joy of screen-free play at PlayWorld Kids.
+            Real stories from real families who've discovered the joy of screen-free play at Tumber Town Kids.
           </p>
         </div>
 
