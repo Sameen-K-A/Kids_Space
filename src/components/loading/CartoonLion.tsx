@@ -15,7 +15,7 @@ const CartoonLion: React.FC = () => {
   return (
     <div className="fixed -bottom-2 right-2 z-50 space-y-1 flex flex-col items-end">
       <p className="text-foreground font-medium text-sm font-playful leading-relaxed px-4 py-2 rounded-2xl shadow-soft max-w-xs">
-        Hi there! Welcome to Kids Space! 🌟
+        Hi there! Welcome to Tumber Town! 🌟
       </p>
 
       <div className="flex justify-end w-full">
