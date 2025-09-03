@@ -273,6 +273,7 @@
 
 body {
   -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -282,6 +283,6 @@ body {
 .bg-lion-gradient {
   background-color: hsla(0, 0%, 100%, 0);
   background-image:
-    radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.475) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.3) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(0, 0%, 100%, 0) 0px, transparent 50%);
 }
