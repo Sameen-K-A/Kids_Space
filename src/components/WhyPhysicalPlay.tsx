@@ -1,4 +1,4 @@
-import physicalVsScreenImage from "@/assets/physical-vs-screen.jpg";
+import physicalVsScreenImage from "@/assets/images/physical-vs-screen.jpg";
 
 export const WhyPhysicalPlay = () => {
 

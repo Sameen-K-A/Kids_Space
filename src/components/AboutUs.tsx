@@ -1,4 +1,4 @@
-import kidsActivitiesImage from "@/assets/kids-activities.jpg";
+import kidsActivitiesImage from "@/assets/images/kids-activities.jpg";
 
 export const AboutUs = () => {
   return (
